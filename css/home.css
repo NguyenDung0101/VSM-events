@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
-  padding: 60px;
+  padding: 60px 10% 60px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,7 @@
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 20px;
-  width: 300px;
+  width: 350px;
   color: #000;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -105,7 +105,18 @@
 @media (max-width: 724px) {
   .hero-banner-overlay {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: stretch; /* <- Thêm dòng này để phần tử con chiếm toàn bộ chiều ngang */
+    gap: 40px; /* Gợi ý: thêm khoảng cách giữa text và card */
+  }
+
+  .hero-banner{
+    height: 180vh;
+  }
+
+  .hero-banner-text,
+  .hero-banner-card {
+    width: 100%; /* Cho phép hai phần tử con giãn hết chiều ngang */
   }
 }
 
@@ -252,6 +263,16 @@
   margin-right: 20px;
 }
 
+@media (max-width: 724px) {
+  .zunzo-section{
+    flex-direction: column;
+  }
+
+  .grid-icon1{
+    display: none !important;
+  }
+}
+
 /* ======= BANNER 3 ======= */
 .benefits-section {
   background-image: url("../images/image2.png"); /* đường dẫn từ CSS */
@@ -308,6 +329,10 @@
 
 .benefit-item.left {
   text-align: left;
+}
+
+.benefit-left {
+  display: flex;
 }
 
 .benefit-item h3 {

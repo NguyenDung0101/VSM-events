@@ -42,8 +42,8 @@ body {
 
 /* Top Bar */
 .top-bar {
-  background: #1a1a1a;
-  color: #fff;
+  background: #c3e92d;
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,11 +166,12 @@ body {
 
 .header-icons {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
 .icon-link {
-  color: #1a1a1a;
+  color: #fff;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -212,7 +213,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -291,7 +292,6 @@ body {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .mobile-nav a {
@@ -483,16 +483,17 @@ body {
   background: transparent;
   border: 1px solid #555;
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
   background-color: #c6f01f;
-  color: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .footer-column .phone {
