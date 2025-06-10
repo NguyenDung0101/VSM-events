@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zunzo Clone – Câu lạc bộ chạy bộ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="top-bar">
+        <div class="left-info">
+          <span><i class="fa-solid fa-envelope"></i> example@gmail.com</span>
+          <span class="divider">|</span>
+          <span><i class="fa-solid fa-location-dot"></i> 710 1st St. Easton, PA 18042</span>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <div class="header-middle">
+        <div class="logo">
+          <a href="#"><img src="./images/logo-vsm.png" alt="Zunzo Logo" /></a>
+        </div>
+        <div class="search-bar">
+          <div class="search-wrapper">
+            <select class="category-select" aria-label="Select category">
+              <option>All Categories</option>
+              <option>Running Shoes</option>
+              <option>Apparel</option>
+            </select>
+            <input type="text" placeholder="Search for products..." aria-label="Search products" />
+            <button class="search-btn">SEARCH</button>
+          </div>
+        </div>
+        <div class="header-icons">
+          <a href="#" class="icon-link" aria-label="Login or Register">
+            <i class="fa-regular fa-user"></i>
+            <span>Login/Register</span>
+          </a>
+          <a href="#" class="icon-link" aria-label="Shopping Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="header-container">
+          <div class="logo logo1">
+            <img src="./images/logo-vsm.png" alt="Zunzo" />
+          </div>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">OUR EVENTS</a>
+            <a href="#">LATEST NEWS</a>
+            <a href="#">CONTACT</a>
+          </nav>
+          <div class="hotline">
+            <span>Hotline:</span> <strong>+01 1234 8888</strong>
+          </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-header">
+            <img src="./images/logo-vsm.png" alt="Zunzo" />
+            <button class="close-btn" id="closeMenu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <nav class="mobile-nav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">OUR EVENTS</a>
+            <a href="#">LATEST NEWS</a>
+            <a href="#">CONTACT</a>
+          </nav>
+          <div class="mobile-contact">
+            <span><i class="fa-solid fa-envelope"></i> example@gmail.com</span>
+            <span><i class="fa-solid fa-location-dot"></i> 710 1st St. Easton, PA 18042</span>
+          </div>
+          <div class="mobile-social">
+            <span>Social Media</span>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="mobile-icons">
+            <a href="#" aria-label="Login or Register">
+              <i class="fa-regular fa-user"></i>
+              <span>Login/Register</span>
+            </a>
+            <a href="#" aria-label="Shopping Cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay"></div>
+    </div>
+  </header>
+
+  <!-- =========== BANNER 1 ========== -->
+  <section class="hero-banner">
+    <div class="hero-banner-overlay">
+      <div class="hero-banner-text">
+        <span>SỰ KIỆN ĐẶC BIỆT DÀNH CHO SINH VIÊN!</span>
+        <h1>KHƠI DẬY HÀNH TRÌNH CHẠY BỘ CỦA BẠN</h1>
+        <p>VSM – Nơi kết nối sinh viên đam mê chạy bộ, rèn luyện sức khỏe và chinh phục giới hạn bản thân qua những sự
+          kiện marathon quy mô toàn quốc.</p>
+        <button class="hero-banner-btn">Tham Gia Ngay</button>
+      </div>
+
+      <div class="hero-banner-card">
+        <div class="hero-banner-tag">SỰ KIỆN MỚI</div>
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Sự kiện Marathon">
+        <h3>Giải Marathon Sinh Viên Toàn Quốc 2023</h3>
+        <div class="hero-banner-info"><span class="hero-banner-icon"></span> 20 THÁNG 10, 2023</div>
+        <div class="hero-banner-info"><span class="hero-banner-icon"></span> BẮT ĐẦU 06:00 SÁNG – ĐẾN KHI VỀ ĐÍCH</div>
+        <div class="hero-banner-info"><span class="hero-banner-icon"></span> 710 ĐƯỜNG 1, QUẬN EASTON, PA 18042 | HẠT
+          CHESTER</div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ======= LOGO BANNER ======= -->
+  <div class="logo-slider">
+    <div class="logo-track">
+      <!-- Thêm nhiều logo hơn nếu cần -->
+      <img src="images/logo-vsm.png" alt="PANADOXN">
+      <img src="images/logo-vsm.png" alt="Shangxi">
+      <img src="images/logo-vsm.png" alt="Spotify">
+      <img src="images/logo-vsm.png" alt="BRYCRY.TEC">
+      <img src="images/logo-vsm.png" alt="Vanfaba">
+      <img src="images/logo-vsm.png" alt="Slack">
+
+      <!-- Lặp lại logo để tạo hiệu ứng vô hạn -->
+      <img src="images/logo-vsm.png" alt="PANADOXN">
+      <img src="images/logo-vsm.png" alt="Shangxi">
+      <img src="images/logo-vsm.png" alt="Spotify">
+      <img src="images/logo-vsm.png" alt="BRYCRY.TEC">
+      <img src="images/logo-vsm.png" alt="Vanfaba">
+      <img src="images/logo-vsm.png" alt="Slack">
+    </div>
+  </div>
+
+  <!-- ======= BANNER 2 ======= -->
+  <section class="zunzo-section">
+    <div class="zunzo-images">
+      <div class="top">
+        <img src="images/image3.jpg" alt="Runner 1">
+        <img src="images/image2.png" alt="Runner 2">
+      </div>
+      <div class="grid-icon">
+        <img src="images/image4.png" alt="">
+      </div>
+    </div>
+
+    <div class="zunzo-content">
+      <div class="grid-icon">
+        <img src="images/image4.png" alt="">
+      </div>
+
+      <h5>CHÀO MỪNG BẠN ĐẾN VỚI VSM!</h5>
+      <h2>VSM – CỘNG ĐỒNG CHẠY BỘ SINH VIÊN VIỆT NAM</h2>
+      <p>
+        Chúng tôi là nơi kết nối sinh viên yêu thích chạy bộ trên toàn quốc. VSM tổ chức các giải chạy sôi động,
+        chia sẻ kinh nghiệm tập luyện, và lan tỏa tinh thần thể thao lành mạnh trong cộng đồng sinh viên.
+      </p>
+
+      <div class="divider1"></div>
+
+      <div style="display: flex; align-items: center;">
+        <button class="cta-button">Tìm hiểu thêm</button>
+        <div class="author">
+          <img src="images/image1.jpg" alt="Chris Pad">
+          <div class="author-info">
+            <span>Trần Minh Khoa</span>
+            <small>Đồng sáng lập VSM</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== BANNER 3 ======= -->
+  <section class="benefits-section">
+    <h5>Lợi ích của chạy bộ</h5>
+    <h2>Chạy bộ mang lại điều gì cho sinh viên?</h2>
+
+    <div class="benefits-wrapper">
+      <!-- Bên trái -->
+      <div class="benefit-item left">
+        <div class="num">01</div>
+        <h3>Khỏe mạnh hơn</h3>
+        <p>Cải thiện thể lực, sức bền và nâng cao sức khỏe toàn diện thông qua chạy bộ thường xuyên.</p>
+
+        <div class="num">02</div>
+        <h3>Tự do thể hiện bản thân</h3>
+        <p>Cảm nhận sự giải phóng cơ thể khi sải bước trên những cung đường và chinh phục chính mình.</p>
+      </div>
+
+      <!-- Trung tâm video -->
+      <div class="video-center" id="openVideo">
+        <img src="images/image3.jpg" alt="Thumbnail">
+        <div class="play-icon">&#9658;</div>
+      </div>
+
+      <!-- Bên phải -->
+      <div class="benefit-item">
+        <div class="num">03</div>
+        <h3>Gia nhập cộng đồng</h3>
+        <p>Kết nối với các bạn sinh viên cùng đam mê, cùng nhau hướng tới lối sống tích cực và năng động.</p>
+
+        <div class="num">04</div>
+        <h3>Tăng sức bền – Vượt giới hạn</h3>
+        <p>Rèn luyện ý chí và tinh thần vượt qua thử thách trên hành trình phát triển bản thân.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Video Popup -->
+  <div class="video-popup" id="videoPopup">
+    <span class="close-btn" id="closeVideo">&times;</span>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Job7P4XtzqA?si=S9jfpEE9ZofSBeSj"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <!-- === MEMBERS === -->
+  <section class="team-section">
+    <div class="team-header">
+      <h5>OUR TEAM</h5>
+      <h2>OUR MEMBER, COUCH</h2>
+    </div>
+
+    <div class="team-grid">
+      <!-- Member 1 -->
+      <div class="team-card">
+        <img src="images/member1.png" alt="Chris Pad">
+        <h3>Huỳnh Anh</h3>
+        <p class="team-role">Co - Founder Zunzo</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-card">
+        <img src="images/member2.png" alt="Maverick">
+        <h3>Anh Khải</h3>
+        <p class="team-role">Manager</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-card">
+        <img src="images/member3.jpg" alt="Jessica Nguyen">
+        <h3>Thành Long</h3>
+        <p class="team-role">Coach</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="team-card">
+        <img src="images/member4.png" alt="Jenifer Nolan">
+        <h3>Jenifer Nolan</h3>
+        <p class="team-role">Co - Founder Zunzo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= BANNER 4 ======= -->
+  <section class="events-section">
+    <div class="events-header">
+      <div>
+        <h5>SỰ KIỆN CHẠY BỘ</h5>
+        <h2>Các sự kiện chạy bộ sắp diễn ra</h2>
+      </div>
+      <a href="#" class="view-all">Xem tất cả &raquo;</a>
+    </div>
+
+    <div class="event-container">
+      <!-- Event Card 1 -->
+      <div class="event-card1">
+        <div class="event-info1">
+          <h3>Giải Marathon Sinh Viên TP.HCM 2023</h3>
+          <p><span class="event-icon1"></span> Công viên Gia Định, Gò Vấp, TP.HCM</p>
+          <p><span class="event-icon1"></span> 20 Tháng 10, 2023</p>
+          <p><span class="event-icon1"></span> Bắt đầu lúc 06:00 sáng – Kết thúc khi hoàn thành</p>
+        </div>
+        <div class="event-image1" style="background-image: url('images/image3.jpg');"></div>
+        <div class="event-ticket1">
+          <p class="ticket-label1">Vé tham dự</p>
+          <p class="ticket-price1">450.000đ <span>/vé</span></p>
+          <button class="ticket-btn1">Tìm hiểu thêm</button>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="event-card1">
+        <div class="event-info1">
+          <h3>Giải Nữ Sinh Viên Marathon 2023</h3>
+          <p><span class="event-icon1"></span> Hồ Thiền Quang, Hai Bà Trưng, Hà Nội</p>
+          <p><span class="event-icon1"></span> 28 Tháng 10, 2023</p>
+          <p><span class="event-icon1"></span> Bắt đầu lúc 06:00 sáng – Kết thúc khi hoàn thành</p>
+        </div>
+        <div class="event-image1" style="background-image: url('images/image2.png');"></div>
+        <div class="event-ticket1">
+          <p class="ticket-label1">Vé tham dự</p>
+          <p class="ticket-price1">450.000đ <span>/vé</span></p>
+          <button class="ticket-btn1">Tìm hiểu thêm</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- === BANNER 5 === -->
+  <section class="articles-section">
+    <div class="articles-header">
+      <h5>Bài viết & Hướng dẫn</h5>
+      <h2>Chia sẻ kinh nghiệm & video luyện tập dành cho người chạy bộ</h2>
+    </div>
+
+    <div class="articles-grid">
+      <!-- Bài viết 1 -->
+      <div class="article-card">
+        <div class="article-img">
+          <img src="images/image1.jpg" alt="Nữ vận động viên chạy bộ">
+          <span class="date-tag">21 THÁNG 10</span>
+        </div>
+        <div class="article-meta">
+          <span>🏷️ Mẹo chạy bộ</span>
+          <span>💬 12 bình luận</span>
+        </div>
+        <h3>Hành trình thay đổi: Lợi ích tuyệt vời từ việc chạy bộ mỗi ngày</h3>
+        <p>
+          Khám phá hàng loạt lợi ích mà chạy bộ mang lại như tăng sức bền, cải thiện tim mạch và nâng cao sức khỏe tinh
+          thần...
+        </p>
+        <button class="read-btn">Đọc thêm</button>
+      </div>
+
+      <!-- Bài viết 2 -->
+      <div class="article-card">
+        <div class="article-img">
+          <img src="images/image2.png" alt="Nhóm sinh viên chạy bộ">
+          <span class="date-tag">14 THÁNG 10</span>
+        </div>
+        <div class="article-meta">
+          <span>🏷️ Chương trình luyện tập</span>
+          <span>💬 2 bình luận</span>
+        </div>
+        <h3>Chạy để trưởng thành: Bí quyết sống khỏe và hạnh phúc qua từng bước chạy</h3>
+        <p>
+          Cùng giải phóng cơ thể, thư giãn tâm trí và tìm lại sự cân bằng qua những buổi chạy bộ đều đặn hàng ngày...
+        </p>
+        <button class="read-btn">Đọc thêm</button>
+      </div>
+
+      <!-- Bài viết 3 -->
+      <div class="article-card">
+        <div class="article-img">
+          <img src="images/image3.jpg" alt="Giày chạy bộ sinh viên">
+          <span class="date-tag">25 THÁNG 10</span>
+        </div>
+        <div class="article-meta">
+          <span>🏷️ Sự kiện nổi bật</span>
+          <span>💬 09 bình luận</span>
+        </div>
+        <h3>Vượt lên chính mình: Cùng VSM lan tỏa đam mê và tinh thần thể thao</h3>
+        <p>
+          Kết nối với cộng đồng sinh viên năng động, cùng tham gia các sự kiện marathon ý nghĩa trên toàn quốc...
+        </p>
+        <button class="read-btn">Đọc thêm</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column logo-column">
+        <img src="./images/logo-vsm.png" alt="Logo VSM" class="footer-logo" />
+        <p>
+          Chào mừng bạn đến với cộng đồng chạy bộ sinh viên VSM! Cùng khám phá niềm vui chạy bộ, kết nối với những người
+          bạn có cùng đam mê, và phát huy tối đa tiềm năng của bạn thông qua các tài nguyên và chương trình huấn luyện
+          chuyên sâu.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>LIÊN KẾT NHANH</h4>
+        <ul>
+          <li><a href="#">Về Chúng Tôi</a></li>
+          <li><a href="#">Sự Kiện</a></li>
+          <li><a href="#">Tin Tức</a></li>
+          <li><a href="#">Liên Hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>TRANG</h4>
+        <ul>
+          <li><a href="#">Trang Chủ</a></li>
+          <li><a href="#">Cửa Hàng</a></li>
+          <li><a href="#">Tài Khoản Của Tôi</a></li>
+          <li><a href="#">Danh Sách Yêu Thích</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>NHẬN TIN MỚI</h4>
+        <p><i class="fa-solid fa-phone-volume"></i> Cần hỗ trợ? 24/7</p>
+        <strong class="phone">001-1234-88888</strong>
+        <p><i class="fa-solid fa-location-dot"></i> 710 Đường Số 1, Quận Easton, PA 18042<br />Hạt Chester</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Địa chỉ email của bạn" />
+          <button><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Bản quyền &copy;2023, <span class="brand">VSM</span> – Mọi quyền được bảo lưu</p>
+      <div class="footer-links">
+        <a href="#">Trang Chủ</a> |
+        <a href="#">Tài Khoản</a> |
+        <a href="#">Cửa Hàng</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
