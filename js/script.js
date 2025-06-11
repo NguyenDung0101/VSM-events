@@ -35,3 +35,28 @@ const openBtn = document.getElementById('openVideo');
       overlay.classList.remove('active');
     });
 
+// banner 3
+document.addEventListener('DOMContentLoaded', () => {
+  const openVideo = document.getElementById('openVideo');
+  const videoPopup = document.getElementById('videoPopup');
+  const closeVideo = document.getElementById('closeVideo');
+
+  openVideo.addEventListener('click', () => {
+    videoPopup.classList.add('active');
+  });
+
+  closeVideo.addEventListener('click', () => {
+    videoPopup.classList.remove('active');
+    const iframe = videoPopup.querySelector('iframe');
+    iframe.src = iframe.src; // Reset video khi đóng
+  });
+
+  // Đóng popup khi nhấp ra ngoài video
+  videoPopup.addEventListener('click', (e) => {
+    if (e.target === videoPopup) {
+      videoPopup.classList.remove('active');
+      const iframe = videoPopup.querySelector('iframe');
+      iframe.src = iframe.src;
+    }
+  });
+});

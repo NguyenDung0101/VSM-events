@@ -10,10 +10,6 @@ body {
   padding: 40px 20px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .section-header {
   display: flex;
