@@ -1,0 +1,152 @@
+.hero-banner {
+  background-image: url("/images/image3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  position: relative;
+  color: white;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 60px 10% 60px 10%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-banner-text {
+  width: 500px;
+}
+
+.hero-banner-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.hero-banner-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-banner-text span {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.hero-banner-btn {
+  background-color: #d3ff00;
+  color: black;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.hero-banner-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  padding: 20px;
+  width: 350px;
+  color: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-banner-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.hero-banner-card h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.hero-banner-info {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-banner-tag {
+  background-color: #bfff00;
+  color: black;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-banner-icon {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .hero-banner-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* <- Thêm dòng này để phần tử con chiếm toàn bộ chiều ngang */
+    gap: 40px; /* Gợi ý: thêm khoảng cách giữa text và card */
+  }
+
+  .hero-banner {
+    height: 1300px;
+  }
+
+  .hero-banner-text,
+  .hero-banner-card {
+    width: 100%; /* Cho phép hai phần tử con giãn hết chiều ngang */
+    text-align: center;
+  }
+}
+
+/* ======= LOGO BANNER ======= */
+.logo-slider {
+  background-color: #111;
+  padding: 20px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logo-track {
+  display: inline-block;
+  animation: scroll 25s linear infinite;
+}
+
+.logo-track img {
+  height: 40px;
+  margin: 0 30px;
+  vertical-align: middle;
+  filter: brightness(1000%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
