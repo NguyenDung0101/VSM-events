@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zunzo Clone – Câu lạc bộ chạy bộ</title>
+    <title>VSM - VietNam Student Marathon</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Home/Banner1.css" />
+    <link rel="stylesheet" href="css/Home/Banner2.css" />
+    <link rel="stylesheet" href="css/Home/Banner3.css" />
+    <link rel="stylesheet" href="css/Home/Banner4.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/Header/header.css" />
+    <link rel="stylesheet" href="css/Footer/footer.css" />
     <link rel="stylesheet" href="css/blog.css" />
     <link
       rel="stylesheet"
@@ -19,12 +25,16 @@
       <div class="container">
         <div class="top-bar">
           <div class="left-info">
-            <span><i class="fa-solid fa-envelope"></i> example@gmail.com</span>
+            <span
+              ><i class="fa-solid fa-envelope"></i>vsm.org.vn@gmail.com</span
+            >
             <span class="divider">|</span>
             <span
-              ><i class="fa-solid fa-location-dot"></i> 710 1st St. Easton, PA
-              18042</span
+              ><i class="fa-solid fa-location-dot"></i>Tầng 15 - UEH, 279 Nguyễn
+              Tri Phương, Quận 10, TP. Hồ Chí Minh</span
             >
+            <span class="divider">|</span>
+            <span><i class="fa-solid fa-phone"></i>0329.381.489</span>
           </div>
           <div class="social-icons">
             <a href="#" aria-label="Facebook"
@@ -41,33 +51,6 @@
           </div>
         </div>
 
-        <!-- <div class="header-middle">
-        <div class="logo">
-          <a href="#"><img src="./images/logo-vsm.png" alt="Zunzo Logo" /></a>
-        </div>
-        <div class="search-bar">
-          <div class="search-wrapper">
-            <select class="category-select" aria-label="Select category">
-              <option>All Categories</option>
-              <option>Running Shoes</option>
-              <option>Apparel</option>
-            </select>
-            <input type="text" placeholder="Search for products..." aria-label="Search products" />
-            <button class="search-btn">SEARCH</button>
-          </div>
-        </div>
-        <div class="header-icons">
-          <a href="#" class="icon-link" aria-label="Login or Register">
-            <i class="fa-regular fa-user"></i>
-            <span>Login/Register</span>
-          </a>
-          <a href="#" class="icon-link" aria-label="Shopping Cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Cart</span>
-          </a>
-        </div>
-      </div> -->
-
         <div class="header-bottom">
           <div class="header-container">
             <div class="logo">
@@ -81,11 +64,11 @@
               <i class="fa-solid fa-bars"></i>
             </button>
             <nav class="main-nav" id="mainNav">
-              <a href="#">HOME</a>
-              <a href="#">ABOUT US</a>
-              <a href="#">OUR EVENTS</a>
-              <a href="#">LATEST NEWS</a>
-              <a href="#">CONTACT</a>
+              <a href="#">TRANG CHỦ</a>
+              <a href="#">GIỚI THIỆU</a>
+              <a href="#">SỰ KIỆN</a>
+              <a href="#">STORE VSM</a>
+              <a href="#">TIN TỨC</a>
             </nav>
             <div class="hotline">
               <div class="header-icons">
@@ -112,20 +95,21 @@
               </button>
             </div>
             <nav class="mobile-nav">
-              <a href="#">HOME</a>
-              <a href="#">ABOUT US</a>
-              <a href="#">OUR EVENTS</a>
-              <a href="#">LATEST NEWS</a>
-              <a href="#">CONTACT</a>
+              <a href="#">TRANG CHỦ</a>
+              <a href="#">GIỚI THIỆU</a>
+              <a href="#">SỰ KIỆN</a>
+              <a href="#">STORE VSM</a>
+              <a href="#">TIN TỨC</a>
             </nav>
             <div class="mobile-contact">
               <span
-                ><i class="fa-solid fa-envelope"></i> example@gmail.com</span
+                ><i class="fa-solid fa-envelope"></i>vsm.org.vn@gmail.com</span
               >
               <span
-                ><i class="fa-solid fa-location-dot"></i> 710 1st St. Easton, PA
-                18042</span
+                ><i class="fa-solid fa-location-dot"></i>Tầng 15 - UEH, 279
+                Nguyễn Tri Phương, Quận 10, TP. Hồ Chí Minh</span
               >
+              <span><i class="fa-solid fa-phone"></i>0329.381.489</span>
             </div>
             <div class="mobile-social">
               <span>Social Media</span>
@@ -163,10 +147,32 @@
       </div>
     </header>
 
+    <script>
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const closeMenu = document.getElementById('closeMenu');
+      const overlay = document.getElementById('overlay');
+  
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+  
+      closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+  
+      overlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      </script>
+
     <!-- =========== BANNER 1 ========== -->
     <section class="hero-banner">
       <div class="hero-banner-overlay">
-        <div class="hero-banner-text">
+        <!-- <div class="hero-banner-text">
           <span>SỰ KIỆN ĐẶC BIỆT DÀNH CHO SINH VIÊN!</span>
           <h1>KHƠI DẬY HÀNH TRÌNH CHẠY BỘ CỦA BẠN</h1>
           <p>
@@ -175,7 +181,7 @@
             quốc.
           </p>
           <button class="hero-banner-btn">Tham Gia Ngay</button>
-        </div>
+        </div> -->
 
         <div class="hero-banner-card">
           <div class="hero-banner-tag">SỰ KIỆN MỚI</div>
@@ -183,18 +189,18 @@
             src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
             alt="Sự kiện Marathon"
           />
-          <h3>Giải Marathon Sinh Viên Toàn Quốc 2023</h3>
+          <h3>Vietnam Student Marathon 2025 CHẠY VÌ TƯƠNG LAI</h3>
           <div class="hero-banner-info">
-            <span class="hero-banner-icon"></span> 20 THÁNG 10, 2023
+            <span class="hero-banner-icon"></span> Ưu tiên Sinh viên
           </div>
           <div class="hero-banner-info">
-            <span class="hero-banner-icon"></span> BẮT ĐẦU 06:00 SÁNG – ĐẾN KHI
-            VỀ ĐÍCH
+            <span class="hero-banner-icon"></span> 28/12/2025
           </div>
           <div class="hero-banner-info">
-            <span class="hero-banner-icon"></span> 710 ĐƯỜNG 1, QUẬN EASTON, PA
-            18042 | HẠT CHESTER
+            <span class="hero-banner-icon"></span> Khu đô thị Sala, TP. Thủ Đức,
+            TP. HCM
           </div>
+          <button class="hero-banner-btn">Tham Gia Ngay</button>
         </div>
       </div>
     </section>
@@ -221,139 +227,87 @@
     </div>
 
     <!-- ======= BANNER 2 ======= -->
-    <section class="zunzo-section">
-      <div class="zunzo-images">
-        <div class="top">
-          <img src="images/image3.jpg" alt="Runner 1" />
-          <img class="image2" src="images/image2.png" alt="Runner 2" />
-        </div>
-        <div class="grid-icon">
-          <img src="images/image4.png" alt="" />
-        </div>
-      </div>
+    <section class="run-section">
+      <div class="run-container">
+        <!-- SLIDE BEGIN (để dùng nếu bạn muốn thêm gì đó về sau) -->
+        <div class="slide-begin"></div>
 
-      <div class="zunzo-content">
-        <div class="grid-icon grid-icon1">
-          <img src="images/image4.png" alt="" />
-        </div>
-
-        <h5>CHÀO MỪNG BẠN ĐẾN VỚI VSM!</h5>
-        <h2>VSM – CỘNG ĐỒNG CHẠY BỘ SINH VIÊN VIỆT NAM</h2>
-        <p>
-          
-        </p>
-
-        <div class="divider1"></div>
-
-        <div style="display: flex; align-items: center">
-          <button class="cta-button">Tìm hiểu thêm</button>
-          <div class="author">
-            <img src="images/image1.jpg" alt="Chris Pad" />
-            <div class="author-info">
-              <span>Trần Minh Khoa</span>
-              <small>Đồng sáng lập VSM</small>
-            </div>
+        <!-- SLIDER -->
+        <div class="slider">
+          <div class="slide active">
+            <img src="images/image1.jpg" alt="Runner 1" />
           </div>
+          <div class="slide">
+            <img src="images/image2.png" alt="Runner 2" />
+          </div>
+          <div class="slide">
+            <img src="images/image1.jpg" alt="Runner 3" />
+          </div>
+
+          <!-- DOTS -->
+          <div class="run-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- NỘI DUNG -->
+        <div class="run-content">
+          <h2>RUN TO LIVE 2025</h2>
+          <p>
+            Cuộc sống là một hành trình không khi nào ngừng nghỉ. Người ta cũng
+            thường ví von cuộc sống giống như một “chặng đua marathon”. Cuộc đua
+            không dành cho ai chạy nước rút nhanh nhất, mà dành cho những người
+            không bỏ cuộc.
+          </p>
+          <p>
+            Có hàng ngàn lý do để mỗi người bắt đầu hành trình của chính mình...
+            chúng tôi muốn cùng bạn nói về sự “Bền bỉ”.
+          </p>
+          <p>
+            <strong>Run To Live 2025</strong> truyền cảm hứng về sự “bền bỉ”, nỗ
+            lực vượt thời gian để trở thành phiên bản tốt hơn của chính mình...
+          </p>
         </div>
       </div>
     </section>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      let current = 0;
+      let interval;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+          dots[i].classList.toggle("active", i === index);
+        });
+        current = index;
+      }
+
+      function autoSlide() {
+        interval = setInterval(() => {
+          const next = (current + 1) % slides.length;
+          showSlide(next);
+        }, 4000);
+      }
+
+      // Start auto sliding
+      autoSlide();
+
+      // Click vào dot
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          clearInterval(interval);
+          showSlide(i);
+          autoSlide(); // Restart slide sau khi click
+        });
+      });
+    </script>
 
     <!-- ======== BANNER 3 ======= -->
-    <section class="benefits-section">
-      <div class="container">
-        <h5>Lợi ích của chạy bộ</h5>
-        <h2>Chạy bộ mang lại điều gì cho sinh viên?</h2>
-
-        <div class="benefits-wrapper">
-          <!-- Bên trái -->
-          <div class="benefit-item left">
-            <div class="benefit-card">
-              <div class="num">01</div>
-              <div class="benefit-content">
-                <h3>Khỏe mạnh hơn</h3>
-                <p>
-                  Cải thiện thể lực, sức bền và nâng cao sức khỏe toàn diện
-                  thông qua chạy bộ thường xuyên.
-                </p>
-              </div>
-            </div>
-            <div class="benefit-card">
-              <div class="num">02</div>
-              <div class="benefit-content">
-                <h3>Tự do thể hiện bản thân</h3>
-                <p>
-                  Cảm nhận sự giải phóng cơ thể khi sải bước trên những cung
-                  đường và chinh phục chính mình.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Trung tâm video -->
-          <div class="video-center" id="openVideo">
-            <img src="images/image3.jpg" alt="Video Thumbnail" />
-            <div class="play-icon">▶</div>
-          </div>
-
-          <!-- Bên phải -->
-          <div class="benefit-item right">
-            <div class="benefit-card">
-              <div class="num">03</div>
-              <div class="benefit-content">
-                <h3>Gia nhập cộng đồng</h3>
-                <p>
-                  Kết nối với các bạn sinh viên cùng đam mê, cùng nhau hướng tới
-                  lối sống tích cực và năng động.
-                </p>
-              </div>
-            </div>
-            <div class="benefit-card">
-              <div class="num">04</div>
-              <div class="benefit-content">
-                <h3>Tăng sức bền – Vượt giới hạn</h3>
-                <p>
-                  Rèn luyện ý chí và tinh thần vượt qua thử thách trên hành
-                  trình phát triển bản thân.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Video Popup -->
-    <div class="video-popup" id="videoPopup">
-      <span class="close-btn" id="closeVideo">×</span>
-      <div class="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Job7P4XtzqA?si=S9jfpEE9ZofSBeSj"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-
-    <!-- Video Popup -->
-    <div class="video-popup" id="videoPopup">
-      <span class="close-btn" id="closeVideo">&times;</span>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Job7P4XtzqA?si=S9jfpEE9ZofSBeSj"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
-
     <!-- === MEMBERS === -->
     <section class="team-section">
       <div class="team-header">
@@ -392,76 +346,194 @@
       </div>
     </section>
 
-    <!--OUR BLOG-->
-    <section class="blog-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>OUR BLOGS</h2>
-          <a href="#" class="view-all">VIEW ALL »</a>
-        </div>
-        <div class="blog-grid">
-          <!-- Main Blog -->
-          <div class="main-blog">
-            <img src="images/image1.jpg" alt="Main Blog" />
-            <div class="blog-info">
-              <span class="category">RUNNING</span>
-              <h3>
-                10 Essential Tips For Beginner Runners: Start Your Running
-                Journey Right
-              </h3>
-              <p class="author">by Tony Nguyen — Oct 12, 2023</p>
-              <a href="#" class="read-more">READ MORE</a>
-            </div>
-          </div>
-
-          <!-- Side Blogs -->
-          <div class="side-blogs">
-            <!-- Blog 1 -->
-            <div class="side-blog">
-              <img src="images/image1.jpg" alt="Race" />
-              <div class="blog-info">
-                <span class="category">RACE</span>
-                <h4>
-                  The Science Behind Running: How It Benefits Your Body And Mind
-                </h4>
-                <p class="author">by Rae Lil — Oct 12, 2023</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-
-            <!-- Blog 2 -->
-            <div class="side-blog">
-              <img src="images/image1.jpg" alt="Couch to 5K" />
-              <div class="blog-info">
-                <span class="category">RUNNING</span>
-                <h4>
-                  From Couch To 5K: A Step-By-Step Guide To Becoming A Runner
-                </h4>
-                <p class="author">by Michale Chen — Oct 12, 2023</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-
-            <!-- Blog 3 -->
-            <div class="side-blog">
-              <img src="images/image1.jpg" alt="Running Shoes" />
-              <div class="blog-info">
-                <span class="category">RUNNING</span>
-                <h4>
-                  The Best Running Shoes For Every Terrain: Find Your Perfect
-                  Fit
-                </h4>
-                <p class="author">by Maverick Nguyen — Oct 12, 2023</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="article-section">
+      <div class="article-header">
+        <p>COURSE/TUTORIAL</p>
+        <h2>RUNNING COURSE ARTICLES & VIDEO TUTORIALS ABOUT RUNNING</h2>
       </div>
+      <div class="article-grid">
+        <!-- Card 1 -->
+        <div class="blog-card">
+          <div class="blog-image">
+            <span class="blog-date">14 OCT</span>
+            <img src="images/image1.jpg" alt="Running Event" />
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fa fa-tag"></i> Training Programs</span>
+              <span><i class="fa fa-comments"></i> 2 comments</span>
+            </div>
+            <h3 class="blog-title">
+              Empowerment Through Running: Discovering The Key To A Healthier
+              And Happier Life
+            </h3>
+            <p class="blog-description">
+              Unleash the freedom of mind and body as you experience the joy and
+              liberation of running. Discover how running...
+            </p>
+            <a href="#" class="read-more-btn">READ MORE</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="blog-card">
+          <div class="blog-image">
+            <span class="blog-date">14 OCT</span>
+            <img src="images/image1.jpg" alt="Running Event" />
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fa fa-tag"></i> Training Programs</span>
+              <span><i class="fa fa-comments"></i> 2 comments</span>
+            </div>
+            <h3 class="blog-title">
+              Empowerment Through Running: Discovering The Key To A Healthier And
+              Happier Life
+            </h3>
+            <p class="blog-description">
+              Unleash the freedom of mind and body as you experience the joy and
+              liberation of running. Discover how running...
+            </p>
+            <a href="#" class="read-more-btn">READ MORE</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="blog-card">
+          <div class="blog-image">
+            <span class="blog-date">14 OCT</span>
+            <img src="images/image1.jpg" alt="Running Event" />
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fa fa-tag"></i> Training Programs</span>
+              <span><i class="fa fa-comments"></i> 2 comments</span>
+            </div>
+            <h3 class="blog-title">
+              Empowerment Through Running: Discovering The Key To A Healthier And
+              Happier Life
+            </h3>
+            <p class="blog-description">
+              Unleash the freedom of mind and body as you experience the joy and
+              liberation of running. Discover how running...
+            </p>
+            <a href="#" class="read-more-btn">READ MORE</a>
+          </div>
+        </div>
     </section>
 
     <!-- ========= FOOTER ========= -->
+    <!--Footer-->
+    <!--Footer-->
     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="logo-bottom">
+            <img src="images/logo-vsm.png" alt="msc Logo" class="footer-logo" />
+          </div>
+
+          <p class="footer-sub">279 Nguyễn Tri Phương, Quận 10, TP.Hồ Chí Minh</p>
+          <p class="footer-sub">Điện Thoại: (+84) 329 381 489</p>
+          <p class="footer-sub">Email: msc.edu.vn@gmail.com</p>
+          <p class="footer-sub">© 2025 MSC Center. Phát triển bởi
+            <br> Phòng Công nghệ thông tin
+          </p>
+
+        </div>
+
+        <div class="footer-col">
+          <h4>Kết nối với chúng tôi</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/msc.edu.vn"><img src="/logo/fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="/logo/ytb copy.png" alt="YouTube" /></a>
+            <a href="https://zalo.me/g/acumou501"><img src="/logo/zalo.webp" alt="Yputebe" /></a>
+          </div>
+
+          <!-- Fanpage Facebook -->
+          <div class="fb-page" data-href="https://www.facebook.com/msc.edu.vn" data-tabs="timeline" data-width="300"
+            data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/msc.edu.vn" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/msc.edu.vn">MSC Việt Nam</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col">
+            <h4>Đăng ký nhận tin tức mới nhất từ MSC</h4>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Email của bạn" required />
+              <button type="submit">
+                <img src="logo/send.png" alt="Gửi" />
+              </button>
+            </form>
+          </div>
+
+        </div>
+    </footer>
+
+    <!-- SDK Facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"
+      nonce="abc123"></script>
+
+    <style>
+      .fb-page {
+        margin-top: 12px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .logo-bottom1{
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-col .logo2 img {
+        height: 46px;
+      }
+
+      .logo3 img{
+        height: 100px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-col {
+          margin-bottom: 20px;
+        }
+
+        .logo-bottom {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+
+        .logo-bottom .logo-bottom1 {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin: 0px auto;
+        }
+
+        .logo-bottom img {
+          height: 136px;
+          transition: height 0.3s ease;
+        }
+
+
+        .subscribe-form {
+          width: 100%;
+        }
+      }
+    </style>
+    <!-- Footer cũ -->
+    <!-- <footer class="footer">
       <div class="footer-top">
         <div class="footer-column logo-column">
           <img src="./images/logo-vsm.png" alt="Logo VSM" class="footer-logo" />
@@ -525,7 +597,7 @@
           <a href="#">Cửa Hàng</a>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="js/script.js"></script>
   </body>
