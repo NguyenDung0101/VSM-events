@@ -11,9 +11,10 @@
   <link rel="stylesheet" href="css/Header/header.css" />
   <link rel="stylesheet" href="css/Footer/footer.css" />
 
-  <!-- ========== CSS RIÊNG CHO BANNER GIỚI THIỆU ========== -->
+  <!-- ========== CSS RIÊNG CHO ABOUT US ========== -->
   <link rel="stylesheet" href="css/About/about.css" />
   <link rel="stylesheet" href="css/About/Banner2.css" />
+  <link rel="stylesheet" href="css/About/information.css" />
   <link rel="stylesheet" href="css/Home/Banner3.css" />
   <link rel="stylesheet" href="css/Home/Banner4.css" />
 
@@ -152,7 +153,7 @@
     </div>
   </section>
 
-  <!-- ========== BANNER 2 ========== -->
+  <!-- ========== BANNER 2: ABOUT US ========== -->
   <section class="run-section">
     <div class="run-container">
       <div class="slide-begin"></div>
@@ -233,59 +234,163 @@
     <div class="stat-box">
       <img src="images/award-icon.png" alt="Award Icon">
       <h2 class="counter" data-target="196">0</h2>
-      <p>RUNNING AWARDS</p>
+      <p>GIẢI THƯỞNG VSM</p>
     </div>
     <div class="stat-box">
       <img src="images/members-icon.png" alt="Members Icon">
       <h2 class="counter" data-target="2432">0</h2>
-      <p>ACTIVE MEMBERS</p>
+      <p>CỘNG ĐỒNG VSM</p>
     </div>
     <div class="stat-box">
       <img src="images/events-icon.png" alt="Events Icon">
       <h2 class="counter" data-target="244">0</h2>
-      <p>RUN EVENTS</p>
+      <p>CÁC SỰ KIỆN GIẢI CHẠY</p>
     </div>
     <div class="stat-box">
       <img src="images/shoes-icon.png" alt="Shoes Icon">
       <h2 class="counter" data-target="85">0</h2>
-      <p>MILES RUN</p>
+      <p>SỐ LƯỢNG BÁN</p>
     </div>
   </section>
   <!-- ======= SCRIPT: Counter Animation ======= -->
   <script>
     const counters = document.querySelectorAll('.counter');
-    let hasAnimated = false;
   
-    function animateCounters() {
-      if (hasAnimated) return;
-      const triggerTop = window.innerHeight * 0.9;
+    const animateValue = (el, target, duration = 1000) => {
+      const start = 0;
+      let startTime = null;
   
-      counters.forEach(counter => {
-        const rect = counter.getBoundingClientRect();
-        if (rect.top < triggerTop) {
-          const target = +counter.dataset.target;
-          const speed = 200; // lower = faster
+      const step = timestamp => {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const value = Math.min(Math.floor(progress / duration * target), target);
+        el.innerText = value.toLocaleString(); // format như 2,432
+        if (value < target) {
+          requestAnimationFrame(step);
+        }
+      };
   
-          const updateCount = () => {
-            const current = +counter.innerText;
-            const increment = Math.ceil(target / speed);
-            if (current < target) {
-              counter.innerText = current + increment;
-              setTimeout(updateCount, 15);
-            } else {
-              counter.innerText = target;
-            }
-          };
+      requestAnimationFrame(step);
+    };
   
-          updateCount();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          const el = entry.target;
+          const target = +el.dataset.target;
+          animateValue(el, target);
+          el.classList.add('counted'); // đảm bảo chỉ chạy 1 lần
         }
       });
+    }, {
+      threshold: 0.5 // ít nhất 50% xuất hiện mới bắt đầu
+    });
   
-      hasAnimated = true; // chỉ chạy 1 lần
-    }
-  
-    window.addEventListener('scroll', animateCounters);
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      counter.classList.remove('counted'); // reset nếu chuyển tab
+      observer.observe(counter);
+    });
   </script>
+  
+  <!-- ========== BANNER : INFORMATION PROJECT ========== -->
+  <section class="information-project">
+    <div class="runners-overlay animate-on-scroll animate-left">
+      <div class="image-container">
+        <img src="images/about/tab1.jpg" alt="Runner Left" class="img-left">
+        <img src="images/about/tab2.jpg" alt="Runner Right" class="img-right">
+      </div>
+    </div>
+    <div class="mission-section animate-on-scroll animate-right">
+      <!-- People avatars + text -->
+      <div class="people-info animate-on-scroll fade-up">
+        <div class="avatars">
+          <img src="images/about/user-1.jpg" alt="User 1">
+          <img src="images/about/user-2.jpg" alt="User 2">
+          <img src="images/about/user-3.jpg" alt="User 3">
+          <img src="images/about/user-4.jpg" alt="User 4" class="last-avatar">
+          <div class="more">5M</div>
+        </div>
+        <div class="people-text">
+          <p><strong>Trusted By 50M+ People</strong><br>Around The Globe</p>
+        </div>
+      </div>
+    
+      <!-- Mission title -->
+      <div class="mission-tabs animate-on-scroll fade-up">
+        <h2 class="tab-btn active" data-tab="tab1">Our Mission</h2>
+        <h2 class="tab-btn" data-tab="tab2">Our Mission 2</h2>
+      </div>
+      
+      <!-- MISSION CONTENT ENGLISH -->
+      <div class="mission-content tab-content" id="tab1">
+        <p class="mission-desc animate-on-scroll fade-up">
+          Our objective for this project was to develop a comprehensive financial management platform that provided users with a centralized dashboard for managing their finances.
+        </p>
+        <ul class="checklist animate-on-scroll fade-up">
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i>Identification Of Monthly Income</li>
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i>Creation Of Savings And Investment Plan</li>
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i>Management And Calculation Of Monthly Expenses</li>
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i>Management And Calculation Of Monthly Expenses</li>
+        </ul>
+      </div>
+      
+      <!-- MISSION CONTENT VIETNAMESE -->
+      <div class="mission-content tab-content" id="tab2" style="display: none;">
+        <p class="mission-desc animate-on-scroll fade-up">
+          Mục tiêu của dự án này là xây dựng một nền tảng quản lý tài chính toàn diện, cung cấp cho người dùng một bảng điều khiển trung tâm để quản lý chi tiêu của họ.
+        </p>
+        <ul class="checklist animate-on-scroll fade-up">
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i> Xác định thu nhập hàng tháng</li>
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i> Lập kế hoạch tiết kiệm và đầu tư</li>
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i> Quản lý và tính toán chi tiêu hàng tháng</li>
+          <li><i class="fa-solid fa-circle-check" style="color: #c3e92d;"></i> Quản lý hóa đơn và ngân sách</li>
+        </ul>
+      </div>      
+  </section>
+  
+  <script>
+    const observer1 = new IntersectionObserver(
+      (entries, observer1) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-start');
+            observer1.unobserve(entry.target); // chỉ chạy 1 lần
+          }
+        });
+      },
+      {
+        threshold: 0.2, // 20% xuất hiện thì bắt đầu animation
+      }
+    );
+  
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer1.observe(el);
+    });
+
+    // Chuyển ngôn ngữ tiếng việt
+    const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remove active from all buttons
+      tabButtons.forEach((b) => b.classList.remove("active"));
+
+      // Add active to clicked button
+      btn.classList.add("active");
+
+      // Hide all contents
+      tabContents.forEach((content) => (content.style.display = "none"));
+
+      // Show the content related to clicked tab
+      const tabId = btn.getAttribute("data-tab");
+      document.getElementById(tabId).style.display = "block";
+    });
+  });
+  </script>
+  
+  
   
 
   <!-- ========== BANNER 3: ĐỘI NGŨ HUẤN LUYỆN ========== -->
@@ -409,7 +514,7 @@
       }
 
       .logo-bottom img {
-        height: 136px;
+        height: 105px;
         transition: height 0.3s ease;
       }
 
@@ -418,14 +523,7 @@
       }
     }
   </style>
-  <script>
-    window.markerConfig = {
-      project: '68553a34cb9b467c9b903376',
-      source: 'snippet'
-    };
-
-    !function (e, r, a) { if (!e.__Marker) { e.__Marker = {}; var t = [], n = { __cs: t };["show", "hide", "isVisible", "capture", "cancelCapture", "unload", "reload", "isExtensionInstalled", "setReporter", "clearReporter", "setCustomData", "on", "off"].forEach(function (e) { n[e] = function () { var r = Array.prototype.slice.call(arguments); r.unshift(e), t.push(r) } }), e.Marker = n; var s = r.createElement("script"); s.async = 1, s.src = "https://edge.marker.io/latest/shim.js"; var i = r.getElementsByTagName("script")[0]; i.parentNode.insertBefore(s, i) } }(window, document);
-  </script>
+  
 </body>
 
 </html>

@@ -13,7 +13,6 @@
   background: rgba(0, 0, 0, 0.4);
   padding: 60px 10% 60px 10%;
   display: flex;
-  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -104,7 +103,6 @@
 
 @media (max-width: 768px) {
   .hero-banner-overlay {
-    display: flex;
     flex-direction: column;
     align-items: stretch; /* <- Thêm dòng này để phần tử con chiếm toàn bộ chiều ngang */
     gap: 40px; /* Gợi ý: thêm khoảng cách giữa text và card */
