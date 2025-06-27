@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VSM - VietNam Student Marathon</title>
+
+  <!-- ========== CSS CHUNG ========== -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/common/header.css" />
+  <link rel="stylesheet" href="../css/common/footer.css" />
+  <link rel="stylesheet" href="../css/common/breadcrumb.css" />
+
+  <!-- ========== CSS RIÊNG CHO LIÊN HỆ ========== -->
+  <link rel="stylesheet" href="../css/lien-he/lien-he.css" />
+  
+
+  <!-- ========== ICON ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container">
+      <div class="top-bar">
+        <div class="left-info">
+          <span><i class="fa-solid fa-envelope"></i>vsm.org.vn@gmail.com</span>
+          <span class="divider">|</span>
+          <span><i class="fa-solid fa-location-dot"></i>Tầng 15 - UEH, 279 Nguyễn
+            Tri Phương, Quận 10, TP. Hồ Chí Minh</span>
+          <span class="divider">|</span>
+          <span><i class="fa-solid fa-phone"></i>0329.381.489</span>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="header-container">
+          <div class="logo">
+            <img src="../images/logo-vsm.png" alt="Zunzo" />
+          </div>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <a href="/index.html">TRANG CHỦ</a>
+            <a href="./gioit-thieu.html">GIỚI THIỆU</a>
+            <a href="./su-kien.html">SỰ KIỆN</a>
+            <a href="#">STORE VSM</a>
+            <a href="./tin-tuc.html">TIN TỨC</a>
+            <a href="./lien-he.html">LIÊN HỆ</a>
+          </nav>
+          <div class="hotline">
+            <div class="header-icons">
+              <a href="#" class="icon-link" aria-label="Login or Register">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <a href="#" class="icon-link" aria-label="Login or Register">
+                <i class="fa-regular fa-user"></i>
+                <span>Login/Register</span>
+              </a>
+              <a href="#" class="icon-link" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== MENU MOBILE ========== -->
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-header">
+            <img src="/images/logo-vsm.png" alt="Zunzo" />
+            <button class="close-btn" id="closeMenu" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <nav class="mobile-nav">
+            <a href="/index.html">TRANG CHỦ</a>
+            <a href="./gioit-thieu.html">GIỚI THIỆU</a>
+            <a href="./su-kien.html">SỰ KIỆN</a>
+            <a href="#">STORE VSM</a>
+            <a href="./tin-tuc.html">TIN TỨC</a>
+            <a href="./lien-he.html">LIÊN HỆ</a>
+          </nav>
+          <div class="mobile-contact">
+            <span><i class="fa-solid fa-envelope"></i>vsm.org.vn@gmail.com</span>
+            <span><i class="fa-solid fa-location-dot"></i>Tầng 15 - UEH, 279
+              Nguyễn Tri Phương, Quận 10, TP. Hồ Chí Minh</span>
+            <span><i class="fa-solid fa-phone"></i>0329.381.489</span>
+          </div>
+          <div class="mobile-social">
+            <span>Social Media</span>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="mobile-icons">
+            <a href="#" aria-label="Login or Register">
+              <i class="fa-regular fa-user"></i>
+              <span>Login/Register</span>
+            </a>
+            <a href="#" aria-label="Shopping Cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay"></div>
+    </div>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  </script>
+
+  <!-- =========== ABOUT ========== -->
+  <section class="about-section">
+    <div class="overlay1"></div>
+    <div class="about-content">
+      <h1>Liên hệ</h1>
+      <p><a href="#">Trang chủ</a> &gt; <a href="#">Liện hệ</a></p>
+    </div>
+  </section>
+
+
+  <!-- =========== LIÊN HỆ ========== -->
+  
+  <section class="lien-he">
+    <div class="contact-box">
+      <h4 class="contact-subtitle">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+      <h2 class="contact-title">LIÊN HỆ NGAY</h2>
+      <p class="contact-description">
+        In the 14 years since she first graced our screens in Keeping Up With The Kardashians.
+      </p>
+    
+      <div class="contact-info">
+        <p><strong>PHONE:</strong><br><span class="info-detail">(555) 123-4567</span></p>
+        <p><strong>EMALI:</strong><br><span class="info-detail">hi.avitex@gmail.com</span></p>
+        <p><strong>LOCATION:</strong><br>
+          <span class="info-detail">710 1st St. Easton, PA 18042 | Chester County</span></p>
+      </div>
+    
+      <div class="social-icons1">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+    <div class="contact-form-section">
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" name="telephone" placeholder="Telephone">
+          <input type="number" name="age" placeholder="Age">
+        </div>
+        <div class="form-row">
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">JOIN NOW</button>
+      </form>
+    </div>
+  </section>
+  <iframe 
+    style="border:0; width: 100%; height: 270px;" 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4889.359795889574!2d106.668399!3d10.7611435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fe01ccb37b3%3A0xb9b5223950251041!2sMSC%20Center!5e1!3m2!1svi!2s!4v1749089563191!5m2!1svi!2s"
+    allowfullscreen 
+    loading="lazy">
+</iframe>
+  
+  
+  
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ 
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo-bottom">
+          <img src="../images/logo-vsm.png" alt="msc Logo" class="footer-logo" />
+        </div>
+        <p class="footer-sub">279 Nguyễn Tri Phương, Quận 10, TP.Hồ Chí Minh</p>
+        <p class="footer-sub">Điện Thoại: (+84) 329 381 489</p>
+        <p class="footer-sub">Email: msc.edu.vn@gmail.com</p>
+        <p class="footer-sub">© 2025 MSC Center. Phát triển bởi
+          <br> Phòng Công nghệ thông tin
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Kết nối với chúng tôi</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/vietnamstudentmarathon"><img src="/logo/fb.png" alt="Facebook" /></a>
+          <a href="#"><img src="/logo/ytb copy.png" alt="YouTube" /></a>
+          <a href="https://zalo.me/g/acumou501"><img src="/logo/zalo.webp" alt="Yputebe" /></a>
+        </div>
+        <!-- Fanpage Facebook -->
+        <div class="fb-page" data-href="https://www.facebook.com/vietnamstudentmarathon" data-tabs="timeline"
+          data-width="400" data-height="130" data-small-header="false" data-adapt-container-width="true"
+          data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/vietnamstudentmarathon" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/vietnamstudentmarathon">MSC Việt Nam</a>
+          </blockquote>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col">
+          <h4>Đăng ký nhận tin tức mới nhất từ MSC</h4>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email của bạn" required />
+            <button type="submit">
+              <img src="logo/send.png" alt="Gửi" />
+            </button>
+          </form>
+        </div>
+      </div>
+  </footer>
+  <!-- SDK Facebook -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"
+    nonce="abc123"></script>
+  <style>
+    .fb-page {
+      margin-top: 12px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .logo-bottom1 {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-col .logo2 img {
+      height: 46px;
+    }
+
+    .logo3 img {
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-col {
+        margin-bottom: 20px;
+      }
+
+      .logo-bottom {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .logo-bottom .logo-bottom1 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0px auto;
+      }
+
+      .logo-bottom img {
+        height: 105px;
+        transition: height 0.3s ease;
+      }
+
+      .subscribe-form {
+        width: 100%;
+      }
+    }
+  </style>
+  
+</body>
+
+</html>

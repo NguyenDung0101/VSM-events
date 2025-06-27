@@ -1,0 +1,148 @@
+.lien-he {
+  display: flex;
+  gap: 40px;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+}
+
+/* LIÊN HỆ TRÁI */
+.contact-box {
+  flex: 1;
+  max-width: 600px;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact-subtitle {
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+
+.contact-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-info p strong {
+  font-size: 16px;
+  color: gray;
+  font-weight: 500;
+}
+
+.contact-info p span {
+  font-size: 20px;
+}
+
+.info-detail {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+.social-icons1 {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons1 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.social-icons1 a:hover {
+  background-color: #c3e92d;
+  color: #000;
+}
+
+/* LIÊN HỆ PHẢI */
+.contact-form-section {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 40px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #c3e92d;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b2d628;
+}
+
+/* RESPONSIVE: STACK ON MOBILE */
+@media (max-width: 768px) {
+  .lien-he {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-box,
+  .contact-form-section {
+    padding: 20px;
+  }
+}

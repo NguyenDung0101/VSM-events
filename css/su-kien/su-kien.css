@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+/* Custom heading styles */
+.subtitle {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #54575f;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.run-su-kien {
+  margin: 30px 0;
+}
+
+.main-title {
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+/* Left black panel with arrow shape */
+.event-info {
+  background-color: #0d0d0d;
+  color: white;
+  position: relative;
+  padding: 2rem 2.5rem 2rem 3.5rem;
+  clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50%, 100% 100%, 0% 100%);
+  z-index: 10;
+  min-width: 350px;
+}
+
+/* Bright green angled bar under black left panel */
+.event-info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -26px;
+  width: 26px;
+  height: 100%;
+  background-color: #bce013;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+  z-index: -1;
+}
+
+/* Icons from Heroicons - inline SVG style */
+.icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 0.5rem;
+  fill: #bce013;
+  flex-shrink: 0;
+}
+
+/* Date, time, location lines container */
+.event-lines {
+  margin-top: 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* Middle image block */
+.event-image-wrapper {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  z-index: 5;
+  margin-left: -26px;
+  margin-right: -26px;
+  max-height: 290px;
+  display: flex;
+  align-items: center;
+}
+.event-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Right ticket block */
+.ticket-info {
+  background-color: #0d0d0d;
+  color: white;
+  padding: 2rem 3.5rem 2rem 2.5rem;
+  position: relative;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 4px solid #bce013;
+}
+
+/* Green vertical halftone squares for decorative border on right */
+.ticket-info::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: -56px;
+  height: 50%;
+  width: 56px;
+  background-image: linear-gradient(to bottom, #bce013 25%, transparent 25%),
+    linear-gradient(to bottom, #bce013 25%, transparent 25%);
+  background-size: 16px 32px;
+  background-repeat: repeat-y;
+  background-position: 0 0, 16px 16px;
+  z-index: -1;
+}
+
+.ticket-label {
+  color: #bce013;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.ticket-price {
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: white;
+  line-height: 1;
+  position: relative;
+  padding-right: 3.5rem;
+}
+
+.ticket-price sup {
+  font-weight: 600;
+  font-size: 1rem;
+  position: absolute;
+  top: 42px;
+  right: 12px;
+  color: white;
+}
+
+.btn-learn-more {
+  margin-top: 1.75rem;
+  background-color: #bce013;
+  color: #0d0d0d;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.07em;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  max-width: 140px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+.btn-learn-more:hover {
+  background-color: #a4c311;
+}
+
+.info-su-kien {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Container styles */
+.container-su-kien {
+  display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background: none;
+}
+
+/* Event info heading */
+.event-info h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 300px;
+  white-space: normal;
+}
+
+/* Event lines items */
+.event-lines div {
+  display: flex;
+  align-items: center;
+}
+
+/* Ticket info alignment */
+.ticket-info {
+  align-items: flex-start;
+}
+
+@media (max-width: 850px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .container-su-kien {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .event-info,
+  .ticket-info {
+    min-width: auto;
+    clip-path: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .event-info::after {
+    display: none;
+  }
+  .event-image-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 200px;
+  }
+  .ticket-info {
+    border-left: none;
+    border-top: 4px solid #bce013;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .ticket-info::after {
+    display: none;
+  }
+  .ticket-price {
+    font-size: 2.5rem;
+  }
+  .event-info h2 {
+    font-size: 1.25rem;
+  }
+}

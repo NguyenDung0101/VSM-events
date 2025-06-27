@@ -8,22 +8,15 @@
 
   <!-- ========== CSS CHUNG ========== -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/Header/header.css" />
-  <link rel="stylesheet" href="css/Footer/footer.css" />
+  <link rel="stylesheet" href="./css/common/header.css" />
+  <link rel="stylesheet" href="./css/common/footer.css" />
 
   <!-- ========== CSS RIÊNG CHO BANNER TRANG CHỦ ========== -->
-  <link rel="stylesheet" href="css/Home/Banner1.css" />
-  <link rel="stylesheet" href="css/Home/Banner2.css" />
-  <link rel="stylesheet" href="css/Home/Banner3.css" />
-  <link rel="stylesheet" href="css/Home/Banner4.css" />
-  <link rel="stylesheet" href="css/Home/Banner5.css" />
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/trang-chu/Banner1.css" />
+  <link rel="stylesheet" href="css/trang-chu/Banner2.css" />
+  <link rel="stylesheet" href="css/trang-chu/Banner3.css" />
+  <link rel="stylesheet" href="css/trang-chu/Banner4.css" />
+  <link rel="stylesheet" href="css/trang-chu/Banner5.css" />
 
   <!-- CSS BOOSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
@@ -139,17 +132,18 @@
       <div class="header-bottom">
         <div class="header-container">
           <div class="logo">
-            <img src="./images/logo-vsm.png" alt="Zunzo" />
+            <img src="../images/logo-vsm.png" alt="Zunzo" />
           </div>
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
           </button>
           <nav class="main-nav" id="mainNav">
             <a href="/index.html">TRANG CHỦ</a>
-            <a href="/aboutUs.html">GIỚI THIỆU</a>
-            <a href="#">SỰ KIỆN</a>
+            <a href="./pages/gioit-thieu.html">GIỚI THIỆU</a>
+            <a href="./pages/su-kien.html">SỰ KIỆN</a>
             <a href="#">STORE VSM</a>
-            <a href="#">TIN TỨC</a>
+            <a href="./pages/tin-tuc.html">TIN TỨC</a>
+            <a href="../pages/lien-he.html">LIÊN HỆ</a>
           </nav>
           <div class="hotline">
             <div class="header-icons">
@@ -171,17 +165,18 @@
         <!-- ========== MENU MOBILE ========== -->
         <div class="mobile-menu" id="mobileMenu">
           <div class="mobile-menu-header">
-            <img src="./images/logo-vsm.png" alt="Zunzo" />
+            <img src="/images/logo-vsm.png" alt="Zunzo" />
             <button class="close-btn" id="closeMenu" aria-label="Close menu">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
           <nav class="mobile-nav">
             <a href="#">TRANG CHỦ</a>
-            <a href="#">GIỚI THIỆU</a>
+            <a href="./pages/gioit-thieu.html">GIỚI THIỆU</a>
             <a href="#">SỰ KIỆN</a>
             <a href="#">STORE VSM</a>
             <a href="#">TIN TỨC</a>
+            <a href="../pages/lien-he.html">LIÊN HỆ</a>
           </nav>
           <div class="mobile-contact">
             <span><i class="fa-solid fa-envelope"></i>vsm.org.vn@gmail.com</span>
@@ -239,6 +234,7 @@
 
   <!-- ========== BANNER 1: SỰ KIỆN NỔI BẬT ========== -->
   <section class="hero-banner">
+    <video src="./assets/Video/VSM_Intro Banner.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto"></video>
     <div class="hero-banner-overlay">
       <div class="hero-banner-text">
           <span>SỰ KIỆN ĐẶC BIỆT DÀNH CHO SINH VIÊN!</span>
@@ -250,7 +246,6 @@
           </p>
           <button class="hero-banner-btn">Tham Gia Ngay</button>
         </div>
-
       <div class="hero-banner-card">
         <div class="hero-banner-tag">SỰ KIỆN MỚI</div>
         <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Sự kiện Marathon" />
@@ -401,187 +396,151 @@
 
   <!-- ========== BANNER 4: BÀI VIẾT / VIDEO ========== -->
   <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio section light-background">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Portfolio</h2>
-      <p>
-        Explore a selection of our recent projects across apps, products, and
-        branding — each crafted with attention to detail and creativity.
+  <section id="portfolio" class="portfolio">
+    <div class="container-portfolio">
+      <h2 class="portfolio-title">Our Portfolio</h2>
+      <p class="portfolio-description">
+        Explore a curated selection of our recent projects across apps, products, branding, and books — each crafted with precision and creativity.
       </p>
-    </div>
-    <div class="container">
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-product">Product</li>
-          <li data-filter=".filter-branding">Branding</li>
-          <li data-filter=".filter-books">Books</li>
-        </ul>
-        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200" style="position: relative; margin-left: 105px;">
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="app">App</button>
+        <button class="filter-btn" data-filter="product">Product</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="books">Books</button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item app">
+          <img src="assets/img/portfolio/app-1.jpg" alt="App 1">
+          <div class="portfolio-info">
+            <h4>App 1</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item product">
+          <img src="assets/img/portfolio/product-1.jpg" alt="Product 1">
+          <div class="portfolio-info">
+            <h4>Product 1</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item branding">
+          <img src="assets/img/portfolio/branding-1.jpg" alt="Branding 1">
+          <div class="portfolio-info">
+            <h4>Branding 1</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Books 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item books">
+          <img src="assets/img/portfolio/books-1.jpg" alt="Books 1">
+          <div class="portfolio-info">
+            <h4>Books 1</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item app">
+          <img src="assets/img/portfolio/app-2.jpg" alt="App 2">
+          <div class="portfolio-info">
+            <h4>App 2</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item product">
+          <img src="assets/img/portfolio/product-2.jpg" alt="Product 2">
+          <div class="portfolio-info">
+            <h4>Product 2</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item branding">
+          <img src="assets/img/portfolio/branding-2.jpg" alt="Branding 2">
+          <div class="portfolio-info">
+            <h4>Branding 2</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Books 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item books">
+          <img src="assets/img/portfolio/books-2.jpg" alt="Books 2">
+          <div class="portfolio-info">
+            <h4>Books 2</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item app">
+          <img src="assets/img/portfolio/app-3.jpg" alt="App 3">
+          <div class="portfolio-info">
+            <h4>App 3</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item product">
+          <img src="assets/img/portfolio/product-3.jpg" alt="Product 3">
+          <div class="portfolio-info">
+            <h4>Product 3</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item branding">
+          <img src="assets/img/portfolio/branding-3.jpg" alt="Branding 3">
+          <div class="portfolio-info">
+            <h4>Branding 3</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-            <div class="portfolio-content h-100">
-              <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Books 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
+        </div>
+        <div class="portfolio-item books">
+          <img src="assets/img/portfolio/books-3.jpg" alt="Books 3">
+          <div class="portfolio-info">
+            <h4>Books 3</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+  
+      // Filter animation
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+  
+          const filter = button.getAttribute('data-filter');
+  
+          portfolioItems.forEach(item => {
+            item.classList.remove('show');
+            if (filter === 'all' || item.classList.contains(filter)) {
+              item.style.display = 'block';
+              setTimeout(() => item.classList.add('show'), 10);
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+  
+      // Scroll reveal animation using IntersectionObserver
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // Only animate once
+          }
+        });
+      }, {
+        threshold: 0.2,
+      });
+  
+      portfolioItems.forEach(item => {
+        observer.observe(item);
+      });
+    });
+  </script>
+  
+  
 
 
   <!-- ========== BANNER 4: BÀI VIẾT / VIDEO ========== -->
