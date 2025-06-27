@@ -1,20 +1,19 @@
 {
-  "name": "crm-vsm",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "A CMS for managing articles using Node.js and MongoDB.",
-  "main": "src/app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.10.9",
-    "dotenv": "^8.2.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "multer": "^2.0.1"
+  }
 }

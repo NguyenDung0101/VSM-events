@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo bài viết mới</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>✍️ Tạo bài viết mới</h1>
+      <form id="post-form" enctype="multipart/form-data">
+        <label>Tiêu đề</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Tiêu đề bài viết"
+          required
+        />
+
+        <label>Ảnh bìa</label>
+        <input type="file" name="thumbnail" accept="image/*" required />
+
+        <label>Mô tả ngắn</label>
+        <textarea
+          name="shortDescription"
+          placeholder="Mô tả ngắn"
+          required
+        ></textarea>
+
+        <label>Nội dung</label>
+        <textarea
+          name="content"
+          placeholder="Nội dung bài viết"
+          required
+        ></textarea>
+
+        <label>Tác giả</label>
+        <input type="text" name="author" placeholder="Tên tác giả" />
+
+        <label>Chuyên mục</label>
+        <input
+          type="text"
+          name="category"
+          placeholder="Chuyên mục (vd: tin tức, sự kiện)"
+        />
+
+        <label>Tags (phân cách bằng dấu phẩy)</label>
+        <input type="text" name="tags" placeholder="tag1, tag2, tag3" />
+
+        <button type="submit">Tạo bài viết</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("post-form");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch("http://localhost:5000/api/posts", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!res.ok) {
+            const errorData = await res.json();
+            throw new Error(errorData.error || "Lỗi không xác định");
+          }
+
+          const data = await res.json();
+          alert("✅ Tạo bài viết thành công!");
+          window.location.href = "index.html";
+        } catch (err) {
+          console.error("❌ Lỗi khi tạo bài viết:", err.message);
+          alert("❌ Tạo bài viết thất bại: " + err.message);
+        }
+      });
+    </script>
+  </body>
+</html>
