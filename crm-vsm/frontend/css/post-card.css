@@ -1,0 +1,33 @@
+.post-card {
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.post-thumbnail img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.post-meta {
+  font-size: 13px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.post-actions {
+  margin-top: 8px;
+}
+
+.post-actions .btn {
+  margin-right: 8px;
+}
