@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/api/posts", {
+      const res = await fetch("https://backend-vsm-events.onrender.com/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   loading.style.display = "block";
 
   try {
-    const res = await fetch("http://localhost:3000/api/posts", {
+    const res = await fetch("https://backend-vsm-events.onrender.com/api/posts", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -99,7 +99,7 @@ async function deletePost(id) {
 
   try {
     const token = localStorage.getItem("token");
-    const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    const res = await fetch(`https://backend-vsm-events.onrender.com/api/posts/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

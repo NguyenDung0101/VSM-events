@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password").value;
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
+      const res = await fetch("https://backend-vsm-events.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

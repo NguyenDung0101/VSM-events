@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load bài viết
   async function loadPost() {
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+      const res = await fetch(`https://backend-vsm-events.onrender.com/api/posts/${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+      const res = await fetch(`https://backend-vsm-events.onrender.com/api/posts/${postId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!confirm("Bạn có chắc muốn xóa bài viết này không?")) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+      const res = await fetch(`https://backend-vsm-events.onrender.com/api/posts/${postId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
