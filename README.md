@@ -6,7 +6,7 @@
 ---
 
 ## 📁 1. Kiến trúc tổng quan
-
+Link demo: https://nguyendung0101.github.io/VSM-events/crm-vsm/frontend/login.html 
 Dự án được tổ chức theo kiến trúc **monorepo** với 2 phần chính:
 
 ```
