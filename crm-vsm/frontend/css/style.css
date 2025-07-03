@@ -21,8 +21,10 @@
   --sidebar-collapsed: 70px;
   --topbar-height: 70px;
 
-  --font-family: "Inter", "Segoe UI", "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-family-heading: "Inter", "Segoe UI", "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: "Inter", "Segoe UI", "Roboto", -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-family-heading: "Inter", "Segoe UI", "Roboto", -apple-system,
+    BlinkMacSystemFont, sans-serif;
   --border-radius: 8px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

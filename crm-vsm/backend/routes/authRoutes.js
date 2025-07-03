@@ -23,6 +23,10 @@ const isAdmin = (req, res, next) => {
 
 router.post('/register-admin', authController.registerAdmin); // gọi một lần duy nhất
 router.post('/login', authController.login);
+router.get('/users', authMiddleware, isAdmin, authController.getAllUsers);
 router.post('/create-user', authMiddleware, isAdmin, authController.createUser);
+router.put('/users/:id', authMiddleware, isAdmin, authController.updateUser);
+router.delete('/users/:id', authMiddleware, isAdmin, authController.deleteUser);
+
 
 module.exports = router;

@@ -73,3 +73,53 @@ exports.createUser = async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 };
+
+exports.updateUser = async (req, res) => {
+  try {
+    const { id } = req.params; // Lấy id từ URL
+    const { name, password } = req.body; // Các trường cần cập nhật
+
+    const updates = {};
+    if (name) {
+      updates.name = name;
+      updates.email = `${name}@vsm.org.vn`; // Cập nhật luôn email nếu đổi tên
+    }
+    if (password) {
+      updates.password = await bcrypt.hash(password, 10);
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(id, updates, { new: true });
+
+    if (!updatedUser) return res.status(404).json({ message: "Không tìm thấy người dùng" });
+
+    res.json({ message: "Cập nhật thành công", user: updatedUser });
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+exports.deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedUser = await User.findByIdAndDelete(id);
+
+    if (!deletedUser) return res.status(404).json({ message: "Người dùng không tồn tại" });
+
+    res.json({ message: "Xóa người dùng thành công", user: deletedUser });
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+// authController.js hoặc userController.js
+exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find().sort({ createdAt: -1 });
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: 'Server error' });
+  }
+};
+
+
